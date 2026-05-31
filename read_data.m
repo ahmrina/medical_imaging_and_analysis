@@ -1,7 +1,3 @@
-clc
-
-% reads CT scans (.DCM files) into a list
-
 function scans = read_data(folder_path, format)
   files = dir(fullfile(folder_path, format));
   scans = cell(1, length(files));
@@ -21,8 +17,6 @@ function scans = read_data(folder_path, format)
 end
  
 
+% example usage: 
 %images = read_data("/MATLAB Drive/medical_image_processing_and_analysis/datasets/ct_scans_samples", "*.DCM");
 
-%addpath("/MATLAB Drive/enhancement_techniques/enhancement_methods.m")
-
-%output = intensity_scale(image(1), -150, 250);
